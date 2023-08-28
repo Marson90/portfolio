@@ -14,10 +14,10 @@ pwd_length = 12
 #generating password with all the characters in random order meeting a constraint
 while True:
     pwd = ''
-    for i in length(pwd_length):
+    for i in range(pwd_length):
         pwd += ''.join(secrets.choice(alphabet))
 
-    if(any(char in specialchars for char in pwd)and 
+    if(any(char in specialchar for char in pwd)and 
        sum(char in digits for char in pwd)>=2):
         break
 print(pwd)
